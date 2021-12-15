@@ -10,7 +10,9 @@ const KEY = '88e6351981ab46cf81964adbc5ddb21b'
 const BASE_URL = 'http://api.weatherbit.io/v2.0/current'
 
 app.use(express.json());
-app.use(urlencoded({extended: true}))
+app.use(urlencoded({extended: true}));
+app.use(express.static('My-rezume'));
+app.use(express.static('asjdvbosdvnosdvnsodvnsovosdijoij'));
 
 app.use('/api/weather', async ( req, res) => {
     const result = await import ('got')
